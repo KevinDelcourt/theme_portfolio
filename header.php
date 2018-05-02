@@ -9,8 +9,9 @@
         
         <title><?php echo get_bloginfo( 'name' ); ?></title>
         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">    
-        <link rel="stylesheet" href="<?php echo get_bloginfo( 'template_directory' );?>/style.css" "> 
+        <link rel="stylesheet" href="<?php echo get_bloginfo( 'template_directory' );?>/style.css" > 
         
         <?php wp_head(); ?>
     </head>
@@ -18,13 +19,16 @@
     <body>
         
         <div class="jumbotron m-0">
-            <h1 class="display-3 "><a class="text-body" href="<?php echo get_bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
+            <h1 class="display-3 "><a class="text-dark" href="<?php echo get_bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
             <p><?php echo get_bloginfo( 'description' ); ?></p>
         </div>
         
         
 
-        <div id="main_navbar" class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+        
+        
+        <div class="main bg-secondary text-justify"><!-- Fin dans le footer, encadre le contenu -->
+            <div id="main_navbar" class="navbar navbar-expand-md bg-dark navbar-dark sticky-top ">
             
             <a class="navbar-brand" href="#"></a>
 
@@ -47,4 +51,4 @@
             ?>
             </nav>
             
-        </div>
+             </div>

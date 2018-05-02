@@ -1,8 +1,10 @@
     
-    <footer class="page-footer d-flex justify-content-between p-3">
-        <div>Penser à trouver des trucs à mettre là.</div>
+    </div><!-- Fin du div .main -->
+    
+    <footer class="page-footer d-flex justify-content-between p-3 bg-dark text-light">
+        <div>Contact/a propos</div>
         <div>
-            <a href="#">Revenir en haut</a>
+            <a href="#" title="Revenir en haut" class="text-light"><i class="fa fa-arrow-up"></i></a>
         </div>
     </footer>
 

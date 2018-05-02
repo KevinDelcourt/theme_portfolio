@@ -6,3 +6,24 @@ Version: 0.0.1
 Tags: bootstrap
 */
 
+html, body {
+  height: 100%;
+  overflow-x:hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.fa{
+  font-size: 40px;
+}
