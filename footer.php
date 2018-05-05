@@ -8,8 +8,7 @@
                 output_custom_option('contact', 'at', 'Contact');
                 output_custom_option('a_propos', 'info-circle', 'A propos du site');
             ?>
-            
-        
+
         </div>
         <div>
             <a href="<?php echo get_bloginfo( 'wpurl' ).'/wp-login' ?>" title="Connexion" class="text-light"><i class="fa fa-user fa-3x fa-fw"></i></a> 
