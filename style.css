@@ -24,3 +24,9 @@ footer {
   flex-shrink: 0;
 }
 
+/* Transitions pour les items qui en auront besoin */
+.page-link,
+.menu-item,
+a{
+    transition: all 0.2s;
+}

@@ -6,6 +6,9 @@ require_once TEMPLATEPATH."/includes/general/class-wp-bootstrap-navwalker.php";
 //Pour créer un menu supplémentaire dans l'admin pannel
 require_once TEMPLATEPATH."/includes/general/functions-custom-settings.php";
 
+//Pour les thèmes personnalisés
+require_once TEMPLATEPATH."/includes/custom_color/color_class.php";
+
 //Indique à wordpress de gérer le titre de chaque page de manière intuitive
 add_theme_support( 'title-tag' );
 
