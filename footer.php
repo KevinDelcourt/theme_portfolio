@@ -2,9 +2,17 @@
     </div><!-- Fin du div .main -->
     
     <footer class="page-footer d-flex justify-content-between p-3 bg-dark text-light">
-        <div>Contact/a propos</div>
+        <div><!-- Création des liens des champs globaux uniquement si ils ne sont pas vides -->
+            <?php 
+                output_custom_option('color_custom', 'tint', 'Personnaliser le site');
+                output_custom_option('contact', 'at', 'Contact');
+                output_custom_option('a_propos', 'info-circle', 'A propos du site');
+            ?>
+            
+        
+        </div>
         <div>
-            <a href="#" title="Revenir en haut" class="text-light"><i class="fa fa-arrow-up"></i></a>
+            <a href="<?php echo get_bloginfo( 'wpurl' ).'/wp-login' ?>" title="Connexion" class="text-light"><i class="fa fa-user fa-3x fa-fw"></i></a> 
         </div>
     </footer>
 
