@@ -14,11 +14,9 @@
         <!-- css minimal pour que le thème s'affiche correctement -->
         <link rel="stylesheet" href="<?php echo get_bloginfo( 'template_directory' );?>/style.css" > 
         
-        <?php
-            include TEMPLATEPATH.'/color.php';
-        ?>
+        <!-- Traitement cookie/var de session pour les couleurs custom -->
+        <?php include TEMPLATEPATH.'/includes/custom_color/c_header_load.php'; ?>
         
-        <link rel="stylesheet" href="<?php echo get_bloginfo( 'template_directory' );?>/color.php" > 
         
         <?php wp_head(); ?>
     </head>
@@ -51,9 +49,6 @@
         <div class="main bg-secondary text-justify"><!-- Fin dans le footer, encadre le contenu -->
             <div id="main_navbar" class="navbar navbar-expand-md bg-dark navbar-dark sticky-top p-0">
             
-               
-
-
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerNav" aria-controls="headerNav" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'best-reloaded' ); ?>">
                     <span class="navbar-toggler-icon"></span><span class="sr-only"><?php esc_html_e( 'Toggle Navigation', 'themeslug' ); ?></span>
                 </button>

@@ -30,3 +30,7 @@ footer {
 a{
     transition: all 0.2s;
 }
+
+.info-mark:hover{
+    cursor: help;
+}

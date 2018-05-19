@@ -1,18 +1,26 @@
 
 <?php get_header(); ?>
     
-<div class="container-fluid m-0 py-4 px-auto">
+
      
-        <?php 
-        
-            if ( have_posts() ) : while ( have_posts() ) : the_post();
+        <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 
-                get_template_part( 'content', get_post_format() );
-                
-            endwhile; endif;
+                <div class="container my-2">     
+                    <div class="card">
+
+                        <div class="card-header">
+                            <h2 class="display-4"><?php the_title(); ?></h2>
+                            <p class="font-weight-light"><?php the_date(); ?> </p>
+                        </div>
+
+                        <div class="card-body">
+                            <?php the_content(); ?>
+                        </div>
+
+                    </div>
+                </div>
+        <?php  endwhile; endif; ?>
            
-        ?>
-           
-</div>
+
         
 <?php get_footer(); 

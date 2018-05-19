@@ -32,9 +32,21 @@ class Color{
         return $instance;
     }
     
+    //Créer une couleur à partir d'une chaîne de type 'ffcc22'
+    public static function createFromHex($hex){
+        $instance = new self(0,0,0);
+        
+        $instance->set_r( hexdec(substr($hex, 0, 2)) );
+        $instance->set_g( hexdec(substr($hex, 2, 2)) );
+        $instance->set_b( hexdec(substr($hex, 4, 2)) );
+        
+        return $instance;
+    }
+    
     //Le texte d'une couleur à mettre dnas du css
     public function printColor(){
-        echo 'rgb('.$this->r.','.$this->g.','.$this->b.')';
+        echo  sprintf("#%02x%02x%02x", $this->r, $this->g, $this->b); //Output: #rrggbb en hex
+        
     }
     
     //fonctions set 
@@ -46,13 +58,13 @@ class Color{
     
     public function set_g($value){
         if( is_int($value)){
-            $this->r = $value;
+            $this->g = $value;
         }
     }
     
     public function set_b($value){
         if( is_int($value)){
-            $this->r = $value;
+            $this->b = $value;
         }
     }
     
@@ -78,4 +90,29 @@ class Color{
         return $this->b;
     }
      
+}
+
+
+//Fonctions utilitaires
+
+//Règle les variables de session à partir de la de la valeur du cookie CCOLOR
+function createSessVarC($c_value){
+     //Decodage du cookie
+        $c_data = explode('_', $c_value );
+        foreach($c_data as $n => $data){
+            switch ($n){
+                case 0://Mode
+                    $_SESSION['C-MODE'] = $data; break;
+                case 1:
+                    $_SESSION['C-MAIN'] = Color::createFromHex($data);break;
+                case 2:
+                    $_SESSION['C-SEC'] = Color::createFromHex($data);break;
+                case 3:
+                    $_SESSION['C-FOND'] = Color::createFromHex($data);break;
+                case 4:
+                    $_SESSION['C-DARK'] = Color::createFromHex($data);break;
+                case 5:
+                    $_SESSION['C-LIGHT'] = Color::createFromHex($data);break;
+            }             
+        }      
 }

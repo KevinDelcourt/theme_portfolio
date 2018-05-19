@@ -1,13 +1,39 @@
 <?php 
+global $light,$dark,$secondary,$main_light,$main_dark;
+
+//Applique les couleurs custom (dans le head du document)
+
+if($_SESSION['C-MODE'] == '1'){//Couleurs custom
+    $main_light = $_SESSION['C-LIGHT'];//blanc
+    $main_dark = $_SESSION['C-DARK'];//noir
 
 
+    $light = $_SESSION['C-SEC']; //Couleur secondaire
+    $secondary = $_SESSION['C-FOND'];//Couleur du fond
+    $dark = $_SESSION['C-MAIN']; //Couleur principale
+    
+}elseif($_SESSION['C-MODE'] == '2'){//Full random
+    
+    $main_light = Color::createRandom();//blanc
+    $main_dark = Color::createRandom();//noir
 
-$main_light = Color::createRanP(200,255);//blanc
-$main_dark = Color::createRanP(0,100);//noir
 
-$light = Color::createRandom();
-$secondary = Color::createRandom();
-$dark = Color::createRandom();
+    $light = Color::createRandom(); //Couleur secondaire
+    $secondary = Color::createRandom();//Couleur du fond
+    $dark = Color::createRandom(); //Couleur principale
+    
+}else{//Random pondéré
+    
+    $main_light = Color::createRanP(200,255);//blanc
+    $main_dark = Color::createRanP(0,75);//noir
+
+
+    $light = Color::createRanP(160,255); //Couleur secondaire
+    $secondary = Color::createRanP(120,255);//Couleur du fond
+    $dark = Color::createRanP(0,150); //Couleur principale
+    
+}
+
 
 ?>
 
