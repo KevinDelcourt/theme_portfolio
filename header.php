@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="<?php echo get_bloginfo( 'template_directory' );?>/style.css" > 
         
         <!-- Traitement cookie/var de session pour les couleurs custom -->
-        <?php include TEMPLATEPATH.'/includes/custom_color/c_header_load.php'; ?>
+        <?php include TEMPLATEPATH.'/includes/custom_color/cookie_loader_color.php'; ?>
         
         
         <?php wp_head(); ?>
@@ -69,4 +69,7 @@
             
             
             </div>
+            
+        <!-- Traitement cookie d'acceptation des cookies et affichage du message d'info correspondant -->
+        <?php include TEMPLATEPATH.'/includes/general/cookie_loader_cookie.php'; 
            

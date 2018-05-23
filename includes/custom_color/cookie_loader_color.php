@@ -9,12 +9,8 @@
 
 if( isset($_COOKIE['CCOLOR']) ){
      
-    if( isset($_SESSION['C-MODE']) && false){
-         
-    }else{
-                    
-       createSessVarC($_COOKIE['CCOLOR']);
-                    
+    if( !isset($_SESSION['C-MODE']) && false){            
+       createSessVarC($_COOKIE['CCOLOR']);              
     }  
     include TEMPLATEPATH.'/includes/custom_color/color.php';
 }
