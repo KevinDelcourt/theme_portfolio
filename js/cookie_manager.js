@@ -1,5 +1,5 @@
 //Fonctions utilitaires de création/édition de cookie (de w3schools)
-
+//Test
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
