@@ -36,7 +36,7 @@ function mail_admin( $from_email , $subject , $message ){
     echo $subject."<br>";
     echo $message."<br>";
     echo $headers."<br>";
-    //mail(get_option('admin_email') , $subject , $message , $headers);
+    mail(get_option('admin_email') , $subject , $message , $headers);
 }
 
 //Retourne le protocole du site (pour insérer dans un lien)
