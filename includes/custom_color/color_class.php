@@ -1,12 +1,24 @@
 <?php
 
-/* 
+/** 
  * Une classe couleur avec 3 attribut r g b et toutes les méthodes qui permettent d'intéragir avec.
  */
-
 class Color{
     
-    protected $r,$g,$b; //Les variables des 3 couleurs primaires
+    /** 
+    * @var int $r niveau de rouge 
+    */
+    protected $r; 
+    
+    /** 
+    * @var int $g niveau de vert 
+    */
+    protected $g; 
+    
+    /** 
+    * @var int $b niveau de bleu 
+    */
+    protected $b; 
     
     public function __construct($red , $green , $blue) {//Constructeur par défaut
         $this->r = $red ; $this->g = $green ; $this->b = $blue ;

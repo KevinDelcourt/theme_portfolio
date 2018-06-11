@@ -32,10 +32,6 @@ function mail_admin( $from_email , $subject , $message ){
     
     $message = "Message de $from_email: ".$message;
     
-    echo get_option('admin_email')."<br>";
-    echo $subject."<br>";
-    echo $message."<br>";
-    echo $headers."<br>";
     mail(get_option('admin_email') , $subject , $message , $headers);
 }
 

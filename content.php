@@ -5,7 +5,6 @@
         
         <div class="card-header">
             <h4><a class="text-dark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-            <p class="font-weight-light"><?php the_date(); ?> </p>
         </div>
 
 
